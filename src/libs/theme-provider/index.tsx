@@ -51,13 +51,13 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
   const xl = width < 1800;
   const lg = width < 1400;
   const md = width < 1024;
-  const sm = width < 768;
+  const sm = width < 720;
   const xs = width < 480;
 
   const arrayOfThemes = [ThemeNames.default, ThemeNames.dark];
 
   const currentTheme: Themes[ThemeNames] =
-    themes[arrayOfThemes.find(theme => theme === currentThemeName) || ThemeNames.default];
+    themes[arrayOfThemes.find((theme) => theme === currentThemeName) || ThemeNames.default];
 
   const isCurrentThemeDark = currentThemeName === ThemeNames.dark;
 
